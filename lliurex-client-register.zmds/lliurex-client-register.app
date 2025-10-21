@@ -1,0 +1,16 @@
+Name=lliurex-client-register
+Name[en]=Laptop cart configuration
+Name[es]=Configuración del carrito del portátil
+Name[qcv]=Configuració del carret del portàtil
+Name[ca@valencia]=Configuració del carret del portàtil
+Name[ca_ES]=Configuració del carret del portàtil
+Comment=Tool to assign the lapto to the corresponding cart
+Comment[en]=Tool to assign the lapto to the corresponding cart
+Comment[es]=Herramienta asignar el portátil al carrito correspondiente
+Comment[qcv]=Ferramenta per a assignar al portàtil al carret corresponent
+Comment[ca@valencia]=Ferramenta per a assignar al portàtil al carret corresponent
+Comment[ca_ES]=Ferramenta per a assignar al portàtil al carret corresponent
+Category=System
+Icon=lliurex-client-register
+ScriptPath=lliurex-client-register.zmd
+Groups=sudo;admins;teachers

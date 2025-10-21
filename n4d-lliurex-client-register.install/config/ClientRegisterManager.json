@@ -1,0 +1,23 @@
+{
+    "SETUP": {
+        "type": "python",
+        "path": "ClientRegisterManager.py",
+        "class": "ClientRegisterManager"
+    },
+    "METHODS": {
+        "get_current_cart": {
+            "allowed_groups": [
+                "sudo",
+                "admins",
+                "teachers"
+            ]
+        },
+         "set_cart": {
+            "allowed_groups": [
+                "sudo",
+                "admins",
+                "teachers"
+            ]
+        }
+    }
+}

@@ -1,0 +1,60 @@
+import QtQuick
+import QtQuick.Controls
+import QtQuick.Layouts
+import org.kde.kirigami as Kirigami
+
+
+Rectangle{
+    visible: true
+    Layout.fillWidth:true
+    Layout.fillHeight: true
+    color:"transparent"
+
+    GridLayout{
+        id: loadGrid
+        rows: 3
+        flow: GridLayout.TopToBottom
+        anchors.centerIn:parent
+
+        RowLayout{
+            Layout.fillWidth: true
+            Layout.alignment:Qt.AlignHCenter
+            visible: clientRegisterBridge.showSpinner
+
+            Rectangle{
+                color:"transparent"
+                width:30
+                height:30
+                
+                AnimatedImage{
+                    source: "/usr/share/lliurex-client-register/rsrc/loading.gif"
+                    transform: Scale {xScale:0.45;yScale:0.45}
+                }
+            }
+        }
+
+        RowLayout{
+            Layout.fillWidth: true
+            Layout.alignment:Qt.AlignHCenter
+            visible:clientRegisterBridge.showSpinner
+            Text{
+                id:loadtext
+                text:i18nd("lliurex-client-register", "Loading. Wait a moment...")
+                font.family: "Quattrocento Sans Bold"
+                font.pointSize: 10
+                Layout.alignment:Qt.AlignHCenter
+            }
+        }
+
+        Kirigami.InlineMessage {
+            id: errorLabel
+            visible:!clientRegisterBridge.showSpinner
+            text:i18nd("lliurex-client-register","Error loading configuration")
+            type:Kirigami.MessageType.Error;
+            Layout.minimumWidth:640
+            Layout.fillWidth:true
+            Layout.rightMargin:15
+            Layout.leftMargin:15
+        }
+    }
+}

@@ -1,0 +1,3 @@
+#!/bin/bash
+exec lliurex-client-register
+exit 0

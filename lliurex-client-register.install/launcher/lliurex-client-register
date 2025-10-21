@@ -1,0 +1,91 @@
+#! /usr/bin/python3
+from PySide6.QtWidgets import QApplication
+from PySide6.QtQuick import QQuickView
+from PySide6.QtCore import QUrl, QObject, Slot, Signal, Property
+import os
+import sys
+import subprocess
+import shutil
+
+class Tunnel(QObject):
+
+	def __init__(self):
+
+		QObject.__init__(self)
+		self.clearCache()
+
+	#def __init	
+
+	def clearCache(self):
+
+		clear=False
+		user=os.environ["USER"]
+		versionFile="/home/%s/.config/lliurex-client-register.conf"%user
+		cachePath1="/home/%s/.cache/lliurex-client-register"%user
+		cachePath2="/home/%s/.cache/lliurex-client-register-gui.py"%user
+		installedVersion=self.getPackageVersion()
+
+		if not os.path.exists(versionFile):
+			with open(versionFile,'w') as fd:
+				fd.write(installedVersion)
+
+			clear=True
+
+		else:
+			with open(versionFile,'r') as fd:
+				fileVersion=fd.readline()
+				fd.close()
+
+			if fileVersion!=installedVersion:
+				with open(versionFile,'w') as fd:
+					fd.write(installedVersion)
+					fd.close()
+				clear=True
+		
+		if clear:
+			if os.path.exists(cachePath1):
+				shutil.rmtree(cachePath1)
+			if os.path.exists(cachePath2):
+				shutil.rmtree(cachePath2)
+
+	#def clearCache
+
+	def getPackageVersion(self):
+
+		packageVersionFile="/var/lib/lliurex-client-register/version"
+		pkgVersion=""
+
+		if os.path.exists(packageVersionFile):
+			with open(packageVersionFile,'r') as fd:
+				pkgVersion=fd.readline()
+				fd.close()
+
+		return pkgVersion
+
+
+	#def getPackageVersion
+
+	@Slot(str)
+	def onTicket(self,ticket):
+
+		user=ticket.split(' ')[2]
+		ticket=ticket.replace(' ','##U+0020##')
+		os.system("python3 /usr/share/lliurex-client-register/lliurex-client-register.py %s &"%ticket)
+		app.quit()
+	
+	#def on_ticket
+	
+#class Tunnel	
+
+app = QApplication([])
+app.setDesktopFileName("lliurex-client-register")
+tunnel = Tunnel()
+view = QQuickView()
+view.rootContext().setContextProperty("tunnel", tunnel)
+url = QUrl("/usr/share/lliurex-client-register/rsrc/login.qml")
+view.setSource(url)
+view.show()
+ret=app.exec()
+del view
+del app
+sys.exit(ret)

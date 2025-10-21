@@ -1,0 +1,16 @@
+[Desktop Entry]
+Categories=LliureX-Administration;
+Comment[es_ES]=Herramienta asignar el portátil al carrito correspondiente
+Comment=Tool to assign the lapto to the corresponding cart
+Comment[ca@valencia]=Ferramenta per a assignar al portàtil al carret corresponent
+Comment[ca_ES.UTF-8@valencia]=Ferramenta per a assignar al portàtil al carret corresponent
+Encoding=UTF-8
+Exec=/usr/sbin/lliurex-client-register
+GenericName[es_ES]=lliurex-client-register
+GenericName=lliurex-client-register
+Icon=lliurex-client-register
+Name[es_ES]=LliureX Client Register
+Name=LliureX Client Register
+Name[ca@valencia]=LliureX Client Register
+Name[ca_ES.UTF-8@valencia]=LliureX Client Register
+NoDisplay=true
