@@ -52,13 +52,15 @@ Rectangle{
                 currentIndex:clientRegisterBridge.currentClientCart
                 model:clientRegisterBridge.maxNumCart
                 delegate:ItemDelegate{
-                    width:300
+                    width:40
                     text:index+1
                 }
+                displayText:currentIndex
                 Layout.alignment:Qt.AlignLeft
                 Layout.bottomMargin:10
-                Layout.preferredWidth:100
+                Layout.preferredWidth:60
                 onActivated:{
+                    console.log(cartsValues.currentIndex)
                     clientRegisterBridge.updateCart(cartsValues.currentIndex+1)
                 }
             }

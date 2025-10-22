@@ -16,14 +16,16 @@ class ClientRegisterManager:
 	def __init__(self):
 		
 		self.core=n4dcore.Core.get_core()
+		self.current_cart=0
 				
 	#def init
 
 	def get_current_cart(self):
 
-		current_cart=self.core.get_variable("CONTROLLED_CLASSROOM")
-
-		return n4d.responses.build_successful_call_response(current_cart)
+		ret=self.core.get_variable("CONTROLLED_CLASSROOM")
+		if ret["status"]==0:
+			self.current_cart=ret["return"]
+		return n4d.responses.build_successful_call_response(ret)
 
 	#def get_current_cart
 
@@ -31,10 +33,20 @@ class ClientRegisterManager:
 
 		ret=self.core.set_variable("CONTROLLED_CLASSROOM",new_cart)
 
-		cmd="natfree-tie update"
-		os.system(cmd)
+		if ret["status"]==0:
+			cmd="natfree-tie update"
+			p=subprocess.Popen(cmd,shell=True,stdout=subprocess.PIPE,stderr=subprocess.PIPE)
+			pout,perror=p.communicate()
+			return_code=p.returncode
+			if return_code==0:
+				result=[True,ret]
+			else:
+				self.core.set_variable("CONTROLLED_CLASSROOM",self.current_cart)
+				result=[False,perror.decode()]
+		else:
+			result=[False,ret]
 
-		return n4d.responses.build_successful_call_response()
+		return n4d.responses.build_successful_call_response(result)
 
 	#def set_cart
 		
