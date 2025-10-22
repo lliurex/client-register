@@ -70,7 +70,7 @@ class Tunnel(QObject):
 
 		user=ticket.split(' ')[2]
 		ticket=ticket.replace(' ','##U+0020##')
-		os.system("python3 /usr/share/lliurex-client-register/lliurex-client-register.py %s &"%ticket)
+		os.system("python3 /usr/share/lliurex-client-register/lliurex-client-register-gui.py %s &"%ticket)
 		app.quit()
 	
 	#def on_ticket

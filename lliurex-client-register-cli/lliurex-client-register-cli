@@ -14,7 +14,7 @@ def usage():
 		puts("Actions")
 		with indent(4):	
 			puts("currentconfig: Shows information about current cart assigned")
-			puts("setcart 1|...|15: Assign the lapto to the indicated cart. The cart must be between 1 and 15")
+			puts("setcart 1|...|14: Assign the laptop to the indicated cart. The cart must be between 1 and 14")
 		puts("Flags")
 		with indent(4):
 			puts("-h --help : Show help")

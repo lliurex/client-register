@@ -16,7 +16,7 @@ class ClientRegisterManager:
 	def __init__(self):
 		
 		self.core=n4dcore.Core.get_core()
-		self.current_cart=0
+		self.current_cart=1
 				
 	#def init
 

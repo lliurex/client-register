@@ -19,7 +19,7 @@ class ClientRegisterCliManager(object):
 		
 		self.currentUser=""
 		self.unattendedMode=mode
-		self.currentCart=0
+		self.currentCart=1
 		self.n4dClient=n4d.client.Client()
 		self._getCurrentUser()
 
@@ -137,7 +137,7 @@ class ClientRegisterCliManager(object):
 		p=subprocess.Popen(cmd,shell=True,stdout=subprocess.PIPE)
 		pout=p.communicate()[0].decode().strip()
 		
-		return int(pout)
+		return int(pout)-1
 
 	#def _getMaxCart
 

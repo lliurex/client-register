@@ -18,7 +18,7 @@ class N4dManager:
 	def __init__(self):
 
 		self.debug=False
-		self.currentClientCart=0
+		self.currentClientCart=1
 		self.maxNumCart=0
 	
 	#def __init__
@@ -45,7 +45,7 @@ class N4dManager:
 				cmd="nfctl get NF_DEF_IP_NUMBER"
 				p=subprocess.Popen(cmd,shell=True,stdout=subprocess.PIPE)
 				pout=p.communicate()[0].decode().strip()
-				self.maxNumCart=int(pout)
+				self.maxNumCart=int(pout)-1
 				self.writeLog("- Current cart assigned: %s"%self.currentClientCart)
 				return True
 			else:
