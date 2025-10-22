@@ -41,7 +41,7 @@ class N4dManager:
 			self.writeLog("Client-Register. %s configuration:"%step)
 			ret=self.client.ClientRegisterManager.get_current_cart()
 			if ret['status']==0:
-				self.currentClientCart=ret["return"]
+				self.currentClientCart=int(ret["return"])
 				cmd="nfctl get NF_DEF_IP_NUMBER"
 				p=subprocess.Popen(cmd,shell=True,stdout=subprocess.PIPE)
 				pout=p.communicate()[0].decode().strip()

@@ -60,7 +60,6 @@ Rectangle{
                 Layout.bottomMargin:10
                 Layout.preferredWidth:60
                 onActivated:{
-                    console.log(cartsValues.currentIndex)
                     clientRegisterBridge.updateCart(cartsValues.currentIndex+1)
                 }
             }
