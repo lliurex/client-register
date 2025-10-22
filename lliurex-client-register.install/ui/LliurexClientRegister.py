@@ -67,7 +67,7 @@ class LliurexClientRegister(QObject):
 		self._closePopUp=True
 		self._currentStack=0
 		self._currentOptionsStack=0
-		self._currentClientCart=0
+		self._currentClientCart=1
 		self._maxNumCart=0
 		self._showSpinner=True
 		self.changeInRegistration=False
@@ -317,7 +317,7 @@ class LliurexClientRegister(QObject):
 	@Slot()
 	def openHelp(self):
 		
-		self.helpCmd='xdg-open https://wiki.edu.gva.es/lliurex/tiki-index.php?page=Integración+con+las+WiFis+educativas+de+la+GVA'
+		self.helpCmd='xdg-open https://wiki.edu.gva.es/lliurex/'
 		
 		self.openHelpT=threading.Thread(target=self._openHelpRet)
 		self.openHelpT.daemon=True

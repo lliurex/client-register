@@ -1,0 +1,82 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-10-22 14:18+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../lliurex-client-register.install/ui/rsrc/ApplicationOptions.qml:27
+msgid "Configuration"
+msgstr ""
+
+#: ../lliurex-client-register.install/ui/rsrc/ApplicationOptions.qml:39
+msgid "Help"
+msgstr ""
+
+#: ../lliurex-client-register.install/ui/rsrc/Settings.qml:11
+msgid "Laptop cart configuration"
+msgstr ""
+
+#: ../lliurex-client-register.install/ui/rsrc/Settings.qml:43
+msgid "Laptop assigned to the cart:"
+msgstr ""
+
+#: ../lliurex-client-register.install/ui/rsrc/Settings.qml:85
+#: ../lliurex-client-register.install/ui/rsrc/ChangesDialog.qml:69
+msgid "Apply"
+msgstr ""
+
+#: ../lliurex-client-register.install/ui/rsrc/Settings.qml:103
+#: ../lliurex-client-register.install/ui/rsrc/Settings.qml:125
+msgid "Cancel"
+msgstr ""
+
+#: ../lliurex-client-register.install/ui/rsrc/Settings.qml:118
+msgid "Cart configuration"
+msgstr ""
+
+#: ../lliurex-client-register.install/ui/rsrc/Settings.qml:120
+msgid ""
+"The are pending changes to apply.\n"
+"Do you want apply the changes or discard them?"
+msgstr ""
+
+#: ../lliurex-client-register.install/ui/rsrc/Settings.qml:122
+msgid "Discard"
+msgstr ""
+
+#: ../lliurex-client-register.install/ui/rsrc/Settings.qml:177
+msgid "Changes applied successfully"
+msgstr ""
+
+#: ../lliurex-client-register.install/ui/rsrc/Settings.qml:180
+msgid "Error assigning laptop to cart"
+msgstr ""
+
+#: ../lliurex-client-register.install/ui/rsrc/Settings.qml:207
+msgid "Apply changes. Wait a moment..."
+msgstr ""
+
+#: ../lliurex-client-register.install/ui/rsrc/Settings.qml:219
+msgid "Restoring previous values. Wait a moment..."
+msgstr ""
+
+#: ../lliurex-client-register.install/ui/rsrc/Loading.qml:42
+msgid "Loading. Wait a moment..."
+msgstr ""
+
+#: ../lliurex-client-register.install/ui/rsrc/Loading.qml:52
+msgid "Error loading configuration"
+msgstr ""
