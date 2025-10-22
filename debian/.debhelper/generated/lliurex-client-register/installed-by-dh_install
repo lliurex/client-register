@@ -1,0 +1,7 @@
+./lliurex-client-register.install/ui/lliurex-client-register.py
+./lliurex-client-register.install/ui/LliurexClientRegister.py
+./lliurex-client-register.install/ui/N4dManager.py
+./lliurex-client-register.install/ui/rsrc
+./lliurex-client-register.install/launcher/lliurex-client-register
+./lliurex-client-register.install/logrotate.d/CLIENT-REGISTER
+./lliurex-client-register.install/rsyslog.d/100-client-register.conf

@@ -1,0 +1,3 @@
+./lliurex-client-register-cli.install/lliurex-client-register-cli
+./debian/output/usr/sbin/lliurex-client-register-cli
+./debian/output/usr/lib/python3.12/dist-packages/clientregistercli/

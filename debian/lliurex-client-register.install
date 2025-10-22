@@ -1,0 +1,4 @@
+lliurex-client-register.install/ui/* /usr/share/lliurex-client-register/
+lliurex-client-register.install/launcher/* /usr/sbin
+lliurex-client-register.install/logrotate.d/* /etc/logrotate.d/
+lliurex-client-register.install/rsyslog.d/* /etc/rsyslog.d/
