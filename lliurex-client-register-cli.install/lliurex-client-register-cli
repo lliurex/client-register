@@ -1,0 +1,21 @@
+have lliurex-client-register-cli &&
+_lliurex-client-register-cli()
+{
+    local cur prev opts base
+    COMPREPLY=()
+    cur="${COMP_WORDS[COMP_CWORD]}"
+    prev="${COMP_WORDS[COMP_CWORD-1]}"
+
+    #
+    #  The basic options we'll complete.
+    #
+    opts="currentconfig setcart help"
+
+    case "${prev}" in 
+       *)
+           COMPREPLY=($(compgen -W "${opts}" -- ${cur}))  
+           return 0
+           ;;
+    esac
+}
+[ "$have" ] && complete -F _lliurex-client-register-cli lliurex-client-register-cli

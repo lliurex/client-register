@@ -1,0 +1,58 @@
+#! /usr/bin/python3
+import sys
+import os
+
+from clint import arguments
+from clint.textui import puts, indent
+
+from clientregistercli import ClientRegisterCliManager
+
+def usage():
+	puts("Usage")
+	with indent(4):
+		puts("lliurex-client-register-cli [FLAGS...] ACTION")
+		puts("Actions")
+		with indent(4):	
+			puts("currentconfig: Shows information about current cart assigned")
+			puts("setcart 1|...|15: Assign the lapto to the indicated cart. The cart must be between 1 and 15")
+		puts("Flags")
+		with indent(4):
+			puts("-h --help : Show help")
+			puts("-u --unattended: Run the actions without prompting for user confirmation")
+	sys.exit(1)
+
+#def usage	
+		
+if __name__ == '__main__':
+
+	if os.geteuid() != 0:
+		print("   [CLIENT-REGISTER]: You need be root!")
+		sys.exit(1)
+
+	args = arguments.Args().copy
+	mode=False
+	debug=False
+
+	if args.contains(["-h","--help"]) or len(args.all) == 0 :
+		usage()		
+	if args.contains(["-u","--unattended"]):
+		mode=True
+		index = args.first(["-u","--unattended"])
+		args.pop(index)
+
+	action = args.pop(0)
+	
+	if action=="setcart":
+		if len(args)>0:
+			newCart=args.all[0]
+		else:
+			usage()
+	
+	cr=ClientRegisterCliManager(mode)
+	
+	if action == "currentconfig":
+		sys.exit(cr.showCurrentConfig())
+	elif action=="setcart":
+		sys.exit(cr.setCart(newCart))
+	else:
+		usage()		

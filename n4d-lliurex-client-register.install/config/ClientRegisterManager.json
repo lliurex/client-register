@@ -7,9 +7,7 @@
     "METHODS": {
         "get_current_cart": {
             "allowed_groups": [
-                "sudo",
-                "admins",
-                "teachers"
+                "anonymous"
             ]
         },
          "set_cart": {
