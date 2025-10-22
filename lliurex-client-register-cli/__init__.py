@@ -73,7 +73,7 @@ class ClientRegisterCliManager(object):
 			if int(cart)<=maxNumCart:
 				if int(cart)!=int(self.currentCart):
 					if not self.unattendedMode:
-						response=input('   [Client-Register]: Do you want to activate the automatic connection to the indicated Wifi? (yes/no)): ').lower()
+						response=input('   [Client-Register]: Do you want to change the cart assigned to the laptop? (yes/no)): ').lower()
 					else:
 						response='yes'
 
