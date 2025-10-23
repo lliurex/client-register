@@ -67,8 +67,8 @@ class LliurexClientRegister(QObject):
 		self._closePopUp=True
 		self._currentStack=0
 		self._currentOptionsStack=0
-		self._currentClientCart=1
-		self._maxNumCart=0
+		self._currentClientCart=LliurexClientRegister.n4dMan.currentClientCart
+		self._maxNumCart=LliurexClientRegister.n4dMan.maxNumCart
 		self._showSpinner=True
 		self.changeInRegistration=False
 		LliurexClientRegister.n4dMan.setServer(ticket)
@@ -238,11 +238,10 @@ class LliurexClientRegister(QObject):
 		self.showSettingsMessage=[False,"","Success"]
 
 		if value!=self.currentClientCart:
-			self.currentClientCart=value
-			if self.currentClientCart!=LliurexClientRegister.n4dMan.currentClientCart:
-				self.settingsClientChanged=True
-			else:
-				self.settingsClientChanged=False
+			self.currentClientCart=int(value)
+		
+		if self.currentClientCart!=LliurexClientRegister.n4dMan.currentClientCart:
+			self.settingsClientChanged=True
 		else:
 			self.settingsClientChanged=False
 
@@ -254,7 +253,7 @@ class LliurexClientRegister(QObject):
 		self.showSettingsMessage=[False,"","Success"]
 		self.closePopUp=False
 		self.showChangesDialog=False
-		self.updateInfoT=UpdateInfo(self.currentClientCart)
+		self.updateInfoT=UpdateInfo(self.currentClientCart+1)
 		self.updateInfoT.start()
 		self.updateInfoT.finished.connect(self._updateInfoRet)
 

@@ -55,12 +55,12 @@ Rectangle{
                     width:40
                     text:index+1
                 }
-                displayText:currentIndex
+                displayText:currentIndex+1
                 Layout.alignment:Qt.AlignLeft
                 Layout.bottomMargin:10
                 Layout.preferredWidth:60
                 onActivated:{
-                    clientRegisterBridge.updateCart(cartsValues.currentIndex+1)
+                    clientRegisterBridge.updateCart(cartsValues.currentIndex)
                 }
             }
 

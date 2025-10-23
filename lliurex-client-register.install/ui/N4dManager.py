@@ -20,6 +20,7 @@ class N4dManager:
 		self.debug=False
 		self.currentClientCart=1
 		self.maxNumCart=0
+		self._getCartsValues()
 	
 	#def __init__
 
@@ -35,17 +36,22 @@ class N4dManager:
 
 	#def setServer
 
+	def _getCartsValues(self):
+
+		cmd="nfctl get NF_DEF_IP_NUMBER"
+		p=subprocess.Popen(cmd,shell=True,stdout=subprocess.PIPE)
+		pout=p.communicate()[0].decode().strip()
+		self.maxNumCart=int(pout)-1
+	
+	#def _getCartsValues
+
 	def loadConfig(self,step="Initial"):
 
 		try:
 			self.writeLog("Client-Register. %s configuration:"%step)
 			ret=self.client.ClientRegisterManager.get_current_cart()
 			if ret['status']==0:
-				self.currentClientCart=int(ret["return"])
-				cmd="nfctl get NF_DEF_IP_NUMBER"
-				p=subprocess.Popen(cmd,shell=True,stdout=subprocess.PIPE)
-				pout=p.communicate()[0].decode().strip()
-				self.maxNumCart=int(pout)-1
+				self.currentClientCart=int(ret["return"])-1
 				self.writeLog("- Current cart assigned: %s"%self.currentClientCart)
 				return True
 			else:
