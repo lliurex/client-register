@@ -1,0 +1,27 @@
+[
+    {
+        "prefix": "net.lliurex.lliurex-client-register-cli",
+        "cmd": "/usr/sbin/lliurex-client-register-cli",
+        "nameaction": "cli",
+        "icon": "lliurex-client-register",
+        "default_auth": {
+            "any": "no",
+            "inactive": "no",
+            "active": "no"
+        },
+        "auths": [
+            {
+                "type": "group",
+                "members": [
+                    "sudo",
+                    "admins",
+                    "teachers"
+                ],
+                "any": "yes",
+                "inactive": "yes",
+                "active": "yes"
+            }
+        ],
+        "requiredx":"false"
+    }
+]

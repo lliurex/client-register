@@ -1,0 +1,2 @@
+n4d-lliurex-client-register.install/config/* /etc/n4d/conf.d
+n4d-lliurex-client-register.install/src/* /usr/share/n4d/python-plugins
