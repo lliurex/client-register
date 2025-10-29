@@ -1,15 +1,15 @@
 #!/usr/bin/python3
 
-from PySide6.QtWidgets import QApplication
-from PySide6.QtCore import QUrl
-from PySide6.QtGui import QIcon
-from PySide6.QtQml import QQmlApplicationEngine
+from PySide2.QtWidgets import QApplication
+from PySide2.QtCore import QUrl
+from PySide2.QtGui import QIcon
+from PySide2.QtQml import QQmlApplicationEngine
 
 import sys
 import LliurexClientRegister
 
 app = QApplication()
-app.setDesktopFileName("lliurex-client-register")
+app.setWindowIcon(QIcon("/usr/share/icons/hicolor/scalable/apps/lliurex-client-register.svg"));
 engine = QQmlApplicationEngine()
 engine.clearComponentCache()
 context=engine.rootContext()
@@ -23,7 +23,7 @@ if not engine.rootObjects():
 	sys.exit(-1)
 
 engine.quit.connect(QApplication.quit)
-ret=app.exec()
+ret=app.exec_()
 del engine
 del app
 sys.exit(ret)

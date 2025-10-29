@@ -1,7 +1,7 @@
-import QtQuick
-import QtQuick.Controls
-import QtQuick.Layouts
-import QtQuick.Dialogs
+import QtQuick 2.15
+import QtQuick.Controls 2.15
+import QtQuick.Layouts 1.15
+import QtQuick.Dialogs 1.3
 
 
 Dialog {
@@ -21,15 +21,8 @@ Dialog {
 
     visible:dialogVisible
     title:dialogTitle
-    modal:true
-    anchors.centerIn: Overlay.overlay
-    background:Rectangle{
-        color:"#ebeced"
-        border.color:"#b8b9ba"
-        border.width:1
-        radius:5.0
-    }
-    
+    modality:Qt.WindowModal
+       
     contentItem: Rectangle {
         color: "#ebeced"
         implicitWidth: 420
