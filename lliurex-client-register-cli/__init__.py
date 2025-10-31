@@ -80,7 +80,7 @@ class ClientRegisterCliManager(object):
 					if response.startswith('y'):
 						self.createClient()
 						try:
-							ret=self.n4dClient.ClientRegisterManager.set_cart(cart)
+							ret=self.n4dClient.ClientRegisterManager.set_cart(int(cart))
 							if ret[0]:
 								msg="Changes in client-register. Result successfull"
 								print('   [Client-Register]: %s'%msg)
