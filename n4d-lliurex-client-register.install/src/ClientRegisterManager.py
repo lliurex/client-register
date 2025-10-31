@@ -59,6 +59,8 @@ class ClientRegisterManager:
 				pout,perror=p.communicate()
 				return_code=p.returncode
 				if return_code==0:
+					cmd="systemctl restart sync-on-server-ready"
+					os.system(cmd)
 					result=[True,ret]
 				else:
 					self.core.set_variable("CONTROLLED_CLASSROOM",self.current_cart)
