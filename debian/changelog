@@ -1,3 +1,9 @@
+client-register (1.0.5-lliurex23) jammy; urgency=medium
+
+  * Fixed response when get current cart
+  
+ -- Juan Ramon Pelegrina <juapesai@hotmail.com>  Fri, 31 Oct 2025 11:26:18 +0100
+
 client-register (1.0.4-lliurex23.1) jammy; urgency=medium
 
   * Checked cart value before set
