@@ -1,3 +1,9 @@
+client-register (1.0.65-lliurex23) jammy; urgency=medium
+
+  * Forced restart of sync-on-server-ready
+  
+ -- Juan Ramon Pelegrina <juapesai@hotmail.com>  Fri, 31 Oct 2025 13:19:01 +0100
+
 client-register (1.0.5-lliurex23) jammy; urgency=medium
 
   * Fixed response when get current cart
