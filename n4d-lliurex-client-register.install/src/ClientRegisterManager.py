@@ -26,6 +26,7 @@ class ClientRegisterManager:
 		if ret["status"]==0:
 			try:
 				self.current_cart=int(ret["return"])
+				ret["return"]=self.current_cart
 			except:
 				self.current_cart=ret["return"]
 
