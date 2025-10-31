@@ -1,3 +1,9 @@
+client-register (1.0.4-lliurex23.1) jammy; urgency=medium
+
+  * Checked cart value before set
+  
+ -- Juan Ramon Pelegrina <juapesai@hotmail.com>  Fri, 31 Oct 2025 10:16:32 +0100
+
 client-register (1.0.3-lliurex23) jammy; urgency=medium
 
   * Backported from LliureX 25
