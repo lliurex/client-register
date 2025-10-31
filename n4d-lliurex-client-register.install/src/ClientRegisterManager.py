@@ -24,28 +24,49 @@ class ClientRegisterManager:
 
 		ret=self.core.get_variable("CONTROLLED_CLASSROOM")
 		if ret["status"]==0:
-			self.current_cart=ret["return"]
+			try:
+				self.current_cart=int(ret["return"])
+			except:
+				self.current_cart=ret["return"]
+
 		return n4d.responses.build_successful_call_response(ret)
 
 	#def get_current_cart
 
 	def set_cart(self,new_cart):
 
-		ret=self.core.set_variable("CONTROLLED_CLASSROOM",new_cart)
+		update_var=False
+		msg_error=""
+		result=[False,msg_error]
 
-		if ret["status"]==0:
-			cmd="natfree-tie update"
-			p=subprocess.Popen(cmd,shell=True,stdout=subprocess.PIPE,stderr=subprocess.PIPE)
-			pout,perror=p.communicate()
-			return_code=p.returncode
-			if return_code==0:
-				result=[True,ret]
+		try:
+			tmpCart=int(new_cart)
+			if tmpCart<=14:
+				update_var=True
 			else:
-				self.core.set_variable("CONTROLLED_CLASSROOM",self.current_cart)
-				result=[False,perror.decode()]
-		else:
-			result=[False,ret]
+				msg_error="Cart value invalid"
+		except Exception as e:
+			msg_error=str(e)
+			pass
 
+		if update_var:
+			ret=self.core.set_variable("CONTROLLED_CLASSROOM",int(new_cart))
+
+			if ret["status"]==0:
+				cmd="natfree-tie update"
+				p=subprocess.Popen(cmd,shell=True,stdout=subprocess.PIPE,stderr=subprocess.PIPE)
+				pout,perror=p.communicate()
+				return_code=p.returncode
+				if return_code==0:
+					result=[True,ret]
+				else:
+					self.core.set_variable("CONTROLLED_CLASSROOM",self.current_cart)
+					result=[False,perror.decode()]
+			else:
+				result=[False,ret]
+		else:
+			result=[False,msg_error]
+			
 		return n4d.responses.build_successful_call_response(result)
 
 	#def set_cart
