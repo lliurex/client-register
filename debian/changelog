@@ -1,3 +1,9 @@
+client-register (1.0.5) noble; urgency=medium
+
+  * Fixed response when get current cart
+  
+ -- Juan Ramon Pelegrina <juapesai@hotmail.com>  Fri, 31 Oct 2025 11:23:11 +0100
+
 client-register (1.0.4) noble; urgency=medium
 
   * Checked cart value before set
