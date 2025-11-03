@@ -1,4 +1,10 @@
-client-register (1.0.65-lliurex23) jammy; urgency=medium
+client-register (1.0.7-lliurex23) jammy; urgency=medium
+
+  * Fixed reload of sync-on-server-ready
+  
+ -- Juan Ramon Pelegrina <juapesai@hotmail.com>  Mon, 03 Nov 2025 10:28:22 +0100
+
+client-register (1.0.6-lliurex23) jammy; urgency=medium
 
   * Forced restart of sync-on-server-ready
   
