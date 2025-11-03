@@ -59,7 +59,9 @@ class ClientRegisterManager:
 				pout,perror=p.communicate()
 				return_code=p.returncode
 				if return_code==0:
-					cmd="systemctl restart sync-on-server-ready"
+					cmd="systemctl stop sync-on-server-ready"
+					os.system(cmd)
+					cmd="systemctl start sync-on-server-ready &"
 					os.system(cmd)
 					result=[True,ret]
 				else:
