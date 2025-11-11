@@ -54,7 +54,10 @@ class ClientRegisterCliManager(object):
 		ret=self._getInfo("Initial")
 
 		if ret==0:
-			print('   [Client-Register]: Current cart assigned to laptop: %s'%self.currentCart)
+			if self.currentCart!="":
+				print('   [Client-Register]: Current cart assigned to laptop: %s'%self.currentCart)
+			else:
+				print('   [Client-Register]: NO cart assigned to laptop')
 			return 0
 		else:
 			print('   [Client-Register]: Error loading configuration')
