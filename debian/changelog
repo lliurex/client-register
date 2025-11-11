@@ -1,3 +1,9 @@
+client-register (1.0.9-lliurex23) jammy; urgency=medium
+
+  * Changed to enable use if CONTROLLED_CLASSROOM Is empty
+  
+ -- Juan Ramon Pelegrina <juapesai@hotmail.com>  Tue, 11 Nov 2025 16:09:17 +0100
+
 client-register (1.0.8-lliurex23) jammy; urgency=medium
 
   * Changed method to restart sync-on-server
