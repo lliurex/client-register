@@ -50,8 +50,13 @@ class N4dManager:
 		try:
 			self.writeLog("Client-Register. %s configuration:"%step)
 			ret=self.client.ClientRegisterManager.get_current_cart()
+
 			if ret['status']==0:
-				self.currentClientCart=int(ret["return"])-1
+				if ret["return"]!="":
+					self.currentClientCart=int(ret["return"])-1
+				else:
+					self.currentClientCart=""
+				
 				self.writeLog("- Current cart assigned: %s"%self.currentClientCart)
 				return True
 			else:
