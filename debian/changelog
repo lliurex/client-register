@@ -1,3 +1,9 @@
+client-register (1.0.9) noble; urgency=medium
+
+  * Changed to enable use if CONTROLLED_CLASSROOM is empty
+  
+ -- Juan Ramon Pelegrina <juapesai@hotmail.com>  Tue, 11 Nov 2025 16:03:37 +0100
+
 client-register (1.0.8) noble; urgency=medium
 
   * Changed method to restart sync-on-server-ready
