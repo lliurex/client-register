@@ -316,7 +316,7 @@ class LliurexClientRegister(QObject):
 	@Slot()
 	def openHelp(self):
 		
-		self.helpCmd='xdg-open https://wiki.edu.gva.es/lliurex/'
+		self.helpCmd='xdg-open https://wiki.edu.gva.es/lliurex/tiki-index.php?page=Configuración-de-los-equipos-del-aula-móvil'
 		
 		self.openHelpT=threading.Thread(target=self._openHelpRet)
 		self.openHelpT.daemon=True
