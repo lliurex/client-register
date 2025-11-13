@@ -1,3 +1,9 @@
+client-register (1.0.10-lliurex23) jammy; urgency=medium
+
+  * Fixed url to access to wiki article
+  
+ -- Juan Ramon Pelegrina <juapesai@hotmail.com>  Thu, 13 Nov 2025 14:00:26 +0100
+
 client-register (1.0.9-lliurex23) jammy; urgency=medium
 
   * Changed to enable use if CONTROLLED_CLASSROOM Is empty
