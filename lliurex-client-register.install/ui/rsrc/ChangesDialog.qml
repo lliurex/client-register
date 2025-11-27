@@ -1,12 +1,11 @@
 import QtQuick
 import QtQuick.Controls
 import QtQuick.Layouts
-import QtQuick.Dialogs
+import org.kde.plasma.components as PC
 
 
 Dialog {
     id: customDialog
-    property alias dialogTitle:customDialog.title
     property alias dialogVisible:customDialog.visible
     property alias dialogMsg:dialogText.text
     property alias btnAcceptVisible:dialogApplyBtn.visible
@@ -20,8 +19,8 @@ Dialog {
     signal cancelDialogClicked
 
     visible:dialogVisible
-    title:dialogTitle
     modal:true
+    closePolicy:Popup.NoAutoClose
     anchors.centerIn: Overlay.overlay
     background:Rectangle{
         color:"#ebeced"
@@ -56,13 +55,14 @@ Dialog {
         
         }
       
-        DialogButtonBox {
-            buttonLayout:DialogButtonBox.KdeLayout
+        RowLayout {
+            id:btnBox
             anchors.bottom:parent.bottom
             anchors.right:parent.right
             anchors.topMargin:15
+            spacing:10
 
-            Button {
+            PC.Button {
                 id:dialogApplyBtn
                 display:AbstractButton.TextBesideIcon
                 icon.name:"dialog-ok.svg"
@@ -71,9 +71,11 @@ Dialog {
                 focus:true
                 font.family: "Quattrocento Sans Bold"
                 font.pointSize: 10
-                DialogButtonBox.buttonRole: DialogButtonBox.ApplyRole
                 Keys.onReturnPressed: dialogApplyBtn.clicked()
                 Keys.onEnterPressed: dialogApplyBtn.clicked()
+                onClicked:{
+                    dialogApplyClicked() 
+                }
 
             }
 
@@ -86,9 +88,11 @@ Dialog {
                 focus:true
                 font.family: "Quattrocento Sans Bold"
                 font.pointSize: 10
-                DialogButtonBox.buttonRole: DialogButtonBox.DestructiveRole
                 Keys.onReturnPressed: dialogDiscardBtn.clicked()
                 Keys.onEnterPressed: dialogDiscardBtn.clicked()
+                onClicked:{
+                    discardDialogClicked()
+                }
 
 
             }
@@ -101,23 +105,14 @@ Dialog {
                 focus:true
                 font.family: "Quattrocento Sans Bold"
                 font.pointSize: 10
-                DialogButtonBox.buttonRole:DialogButtonBox.RejectRole
                 Keys.onReturnPressed: dialogCancelBtn.clicked()
                 Keys.onEnterPressed: dialogCancelBtn.clicked()
+                onClicked:{
+                    cancelDialogClicked()
+                }
         
             }
 
-            onApplied:{
-                dialogApplyClicked()
-            }
-
-            onDiscarded:{
-                discardDialogClicked()
-            }
-
-            onRejected:{
-                cancelDialogClicked()
-            }
-        }
+       }
     }
  }

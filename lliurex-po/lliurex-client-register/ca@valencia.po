@@ -3,8 +3,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-10-22 14:18+0200\n"
-"PO-Revision-Date: 2025-10-22 14:30+0200\n"
+"POT-Creation-Date: 2025-11-27 10:27+0100\n"
+"PO-Revision-Date: 2025-11-27 10:27+0100\n"
 "Last-Translator: lliurex <lliurex@gva.es>\n"
 "Language-Team: Spanish\n"
 "Language: es\n"
@@ -30,21 +30,17 @@ msgstr "Configuració del carret del portàtil"
 msgid "Laptop assigned to the cart:"
 msgstr "Portàtil assignat al carret:"
 
-#: ../lliurex-client-register.install/ui/rsrc/Settings.qml:85
+#: ../lliurex-client-register.install/ui/rsrc/Settings.qml:84
 #: ../lliurex-client-register.install/ui/rsrc/ChangesDialog.qml:69
 msgid "Apply"
 msgstr "Aplica"
 
-#: ../lliurex-client-register.install/ui/rsrc/Settings.qml:103
-#: ../lliurex-client-register.install/ui/rsrc/Settings.qml:125
+#: ../lliurex-client-register.install/ui/rsrc/Settings.qml:102
+#: ../lliurex-client-register.install/ui/rsrc/Settings.qml:123
 msgid "Cancel"
 msgstr "Cancel·la"
 
 #: ../lliurex-client-register.install/ui/rsrc/Settings.qml:118
-msgid "Cart configuration"
-msgstr "Configuració del carret"
-
-#: ../lliurex-client-register.install/ui/rsrc/Settings.qml:120
 msgid ""
 "The are pending changes to apply.\n"
 "Do you want apply the changes or discard them?"
@@ -52,23 +48,23 @@ msgstr ""
 "Hi ha canvis pendents d’aplicar.\n"
 "Voleu aplicar els canvis o descartar-los?"
 
-#: ../lliurex-client-register.install/ui/rsrc/Settings.qml:122
+#: ../lliurex-client-register.install/ui/rsrc/Settings.qml:120
 msgid "Discard"
 msgstr "Descarta"
 
-#: ../lliurex-client-register.install/ui/rsrc/Settings.qml:177
+#: ../lliurex-client-register.install/ui/rsrc/Settings.qml:175
 msgid "Changes applied successfully"
 msgstr "Els canvis s’han aplicat correctament"
 
-#: ../lliurex-client-register.install/ui/rsrc/Settings.qml:180
+#: ../lliurex-client-register.install/ui/rsrc/Settings.qml:178
 msgid "Error assigning laptop to cart"
 msgstr "S’ha produït un error en assignar el portàtil al carret"
 
-#: ../lliurex-client-register.install/ui/rsrc/Settings.qml:207
+#: ../lliurex-client-register.install/ui/rsrc/Settings.qml:205
 msgid "Apply changes. Wait a moment..."
 msgstr "S’estan aplicant els canvis. Espereu un moment..."
 
-#: ../lliurex-client-register.install/ui/rsrc/Settings.qml:219
+#: ../lliurex-client-register.install/ui/rsrc/Settings.qml:217
 msgid "Restoring previous values. Wait a moment..."
 msgstr "S’estan restaurant els valors anteriors. Espereu un moment..."
 
@@ -79,3 +75,6 @@ msgstr "S’està carregant. Espereu un moment..."
 #: ../lliurex-client-register.install/ui/rsrc/Loading.qml:52
 msgid "Error loading configuration"
 msgstr "S’ha produït un error carregant la configuració"
+
+#~ msgid "Cart configuration"
+#~ msgstr "Configuració del carret"

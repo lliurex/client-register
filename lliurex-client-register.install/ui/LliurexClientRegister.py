@@ -80,11 +80,19 @@ class LliurexClientRegister(QObject):
 
 	def _loadConfig(self):		
 
+		showError=False
+
 		if self.gatherInfo.ret:
 			self.currentClientCart=copy.deepcopy(LliurexClientRegister.n4dMan.currentClientCart)
 			self.maxNumCart=LliurexClientRegister.n4dMan.maxNumCart
-			self.currentStack=1
+			if self.maxNumCart>0:
+				self.currentStack=1
+			else:
+				showError=True
 		else:
+			shoWError=True
+
+		if showError:
 			if self.currentStack==0:
 				self.showSpinner=False
 			else:
