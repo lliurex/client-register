@@ -1,3 +1,9 @@
+client-register (1.0.11-lliurex23) jammy; urgency=medium
+
+  * Catched error when run in incorrect system configuration
+  
+ -- Juan Ramon Pelegrina <juapesai@hotmail.com>  Thu, 27 Nov 2025 10:34:27 +0100
+
 client-register (1.0.10-lliurex23) jammy; urgency=medium
 
   * Fixed url to access to wiki article
