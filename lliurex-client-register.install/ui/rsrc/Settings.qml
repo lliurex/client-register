@@ -114,7 +114,6 @@ Rectangle{
 
     ChangesDialog{
         id:wifiChangesDialog
-        dialogTitle:"Lliurex Client Register"+" - "+i18nd("lliurex-wifi-gva-control","Cart configuration")
         dialogVisible:clientRegisterBridge.showChangesDialog
         dialogMsg:i18nd("lliurex-client-register","The are pending changes to apply.\nDo you want apply the changes or discard them?")
         btnAcceptVisible:true

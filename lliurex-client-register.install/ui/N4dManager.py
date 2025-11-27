@@ -41,7 +41,10 @@ class N4dManager:
 		cmd="nfctl get NF_DEF_IP_NUMBER"
 		p=subprocess.Popen(cmd,shell=True,stdout=subprocess.PIPE)
 		pout=p.communicate()[0].decode().strip()
-		self.maxNumCart=int(pout)-1
+		if pout!='':
+			self.maxNumCart=int(pout)-1
+		self.writeLog("- Maximum num of cars: %s"%str(self.maxNumCart))
+
 	
 	#def _getCartsValues
 
