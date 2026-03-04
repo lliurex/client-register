@@ -1,3 +1,9 @@
+client-register (1.0.12-lliurex23) jammy; urgency=medium
+
+  * Fixed bug when cart assignment fails
+  
+ -- Juan Ramon Pelegrina <juapesai@hotmail.com>  Wed, 04 Mar 2026 12:35:32 +0100
+
 client-register (1.0.11-lliurex23) jammy; urgency=medium
 
   * Catched error when run in incorrect system configuration
