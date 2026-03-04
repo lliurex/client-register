@@ -1,3 +1,9 @@
+client-register (1.0.12) noble; urgency=medium
+
+  * Fixed bug when cart assignment fails
+  
+ -- Juan Ramon Pelegrina <juapesai@hotmail.com>  Wed, 04 Mar 2026 12:24:52 +0100
+
 client-register (1.0.11) noble; urgency=medium
 
   * Fixed custom dialog template
