@@ -39,6 +39,7 @@ class ClientRegisterManager:
 		update_var=False
 		msg_error=""
 		result=[False,msg_error]
+		previous_cart=self.current_cart
 
 		try:
 			tmpCart=int(new_cart)
@@ -65,7 +66,7 @@ class ClientRegisterManager:
 					os.system(cmd)
 					result=[True,ret]
 				else:
-					self.core.set_variable("CONTROLLED_CLASSROOM",self.current_cart)
+					self.core.set_variable("CONTROLLED_CLASSROOM",previous_cart)
 					result=[False,perror.decode()]
 			else:
 				result=[False,ret]

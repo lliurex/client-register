@@ -28,7 +28,7 @@ Popup {
                 width:30
                 height:30
                 AnimatedImage{
-                    source: "/usr/share/lliurex-wifi-gva-control/rsrc/loading.gif"
+                    source: "/usr/share/lliurex-client-register/rsrc/loading.gif"
                     transform: Scale {xScale:0.45;yScale:0.45}
                 }
             }
