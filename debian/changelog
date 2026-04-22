@@ -1,3 +1,9 @@
+client-register (1.0.13) noble; urgency=medium
+
+  * Added timeout to n4d operations
+  
+ -- Juan Ramon Pelegrina <juapesai@hotmail.com>  Wed, 22 Apr 2026 11:46:07 +0200
+
 client-register (1.0.12) noble; urgency=medium
 
   * Fixed bug when cart assignment fails
