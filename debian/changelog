@@ -1,3 +1,9 @@
+client-register (1.0.14) noble; urgency=medium
+
+  * Added missing timeout for unattended mode
+  
+ -- Juan Ramon Pelegrina <juapesai@hotmail.com>  Wed, 22 Apr 2026 11:57:06 +0200
+
 client-register (1.0.13) noble; urgency=medium
 
   * Added timeout to n4d operations
