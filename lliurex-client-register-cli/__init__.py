@@ -33,7 +33,7 @@ class ClientRegisterCliManager(object):
 			
 			try:
 				ticket=client.get_ticket()
-				self.n4dClient=n4d.client.Client(ticket=ticket)
+				self.n4dClient=n4d.client.Client(ticket=ticket,timeout=60)
 			except Exception as e:
 				msg="Authentication failed. Unable to execute action"
 				self.writeLog(msg)

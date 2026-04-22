@@ -29,7 +29,7 @@ class N4dManager:
 		ticket=ticket.replace('##U+0020##',' ')
 		self.currentUser=ticket.split(' ')[2]
 		tk=n4d.client.Ticket(ticket)
-		self.client=n4d.client.Client(ticket=tk)
+		self.client=n4d.client.Client(ticket=tk,timeout=60)
 
 		self.writeLog("Init session in lliurex-client-register GUI")
 		self.writeLog("User login in GUI: %s"%self.currentUser)
