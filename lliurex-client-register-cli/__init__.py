@@ -43,7 +43,7 @@ class ClientRegisterCliManager(object):
 			masterKey=n4d.client.Key.master_key()
 			
 			if masterKey.valid():
-				self.n4dClient=n4d.client.Client(key=masterKey)
+				self.n4dClient=n4d.client.Client(key=masterKey,timeout=60)
 			else:
 				print('   [Client-Register]: You need root privilege to run this tool')
 
