@@ -1,3 +1,9 @@
+client-register (1.0.13-lliurex23) jammy; urgency=medium
+
+  * Added timeout for n4d operations
+  
+ -- Juan Ramon Pelegrina <juapesai@hotmail.com>  Wed, 22 Apr 2026 12:11:17 +0200
+
 client-register (1.0.12-lliurex23) jammy; urgency=medium
 
   * Fixed bug when cart assignment fails
