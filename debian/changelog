@@ -1,3 +1,9 @@
+client-register (1.0.14-lliurex23) jammy; urgency=medium
+
+  * Added missing n4d plugin postinstall
+  
+ -- Juan Ramon Pelegrina <juapesai@hotmail.com>  Wed, 29 Apr 2026 12:32:38 +0200
+
 client-register (1.0.13-lliurex23) jammy; urgency=medium
 
   * Added timeout for n4d operations
